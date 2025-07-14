@@ -1,0 +1,19 @@
+import 'dart:io';
+import 'dart:math';
+
+void main() {
+  final x = int.parse(stdin.readLineSync()!);
+  final n = int.parse(stdin.readLineSync()!);
+
+  int result = 0;
+
+  for (int i = 0; i <= n; i += 2) {
+    if (i == 0) {
+      result += pow(x, 0).toInt() - 1;
+    } else {
+      result += pow(x, i).toInt();
+    }
+  }
+
+  print(result);
+}
